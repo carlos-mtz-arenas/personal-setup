@@ -7,11 +7,11 @@ log_msg() {
 }
 
 log_msg "installing git"
-dnf install git
+dnf install -y git
 
 log_msg "installing node dependencies"
 # node <3
-dnf install npm node
+dnf install -y npm node
 npm -g install n
 n latest
 
@@ -19,14 +19,14 @@ n latest
 j_version="1.8.0"
 log_msg "installing Java, version $j_version"
 # hopefully will be the same name on the new distribution xD
-dnf install "java-$j_version-openjdk"
+dnf install -y "java-$j_version-openjdk"
 
 log_msg "installing build tools for Java"
 # java build tools
-dnf install ant maven
+dnf install -y ant maven
 
 log_msg "installing zsh and a nice theme"
-dnf install zsh
+dnf install -y zsh
 
 omzsh=~/Documents/bzsh
 mkdir $omzsh
