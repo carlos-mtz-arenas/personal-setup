@@ -6,10 +6,7 @@ Script to install the dependencies that I usually use on a daily basis for my lo
 # Run
 
 ```
-# turn on the super powers
-sudo su
-
 # run the script
-./script.sh
+sudo ./script.sh
 ```
 
