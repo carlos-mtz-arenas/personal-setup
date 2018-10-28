@@ -7,6 +7,6 @@ Script to install the dependencies that I usually use on a daily basis for my lo
 
 ```
 # run the script
-sudo ./script.sh
+sudo ./script.sh <user>
 ```
 
