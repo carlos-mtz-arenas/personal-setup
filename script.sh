@@ -12,15 +12,16 @@ install_utils() {
   log_msg "installing zsh and a nice theme"
   sudo dnf install -y zsh
 
-  su - $user
+  log_msg "using user $user"
   # now install the oh-my-zsh with all the beautiful teams :D
-  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  sh - $user -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
   # setup the theme that I like
   log_msg "Configuring VIM"
   touch ~/.vimrc
   ls -lh ~/.vimrc
   cat vim_configuration.vim >> ~/.vimrc
+  chsh -s /bin/zsh
 }
 
 log_msg "installing git"
